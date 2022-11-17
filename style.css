@@ -12,8 +12,6 @@ body{
     padding: 0;
 }
 
-
-
 .container{
     width: 100vw;
     height: 100vh;
@@ -85,4 +83,99 @@ body{
 
 .main-content{
     background-color: var(--main-grey-color);
+}
+
+img[src="./icons/house.jpg"]{
+    object-fit: cover;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+.header div .svg{
+    max-width: 20px;
+}
+
+.hithere img[src="./icons/house.jpg"]{
+    object-fit: cover;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+}
+
+.header{
+    width: auto;
+    height: auto;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    margin-left: 20px;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    justify-items: start;
+    padding: 25px;
+    row-gap: 15px;
+
+}
+
+.searchbar{
+
+    justify-self: stretch;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+
+}
+
+.belltime{
+    justify-self: end;
+    display: flex;
+    gap: 35px;
+    align-items: center;
+    margin-right: 70px;
+    margin-left: 60px;
+}
+
+.hithere{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    
+}
+
+
+
+input[type="search"]{
+    border: none;
+    border-radius: 20px;
+    height: 2rem;
+    background-color: var(--main-grey-color);
+    width: max(100px, 90%);
+    
+}
+
+input[type="search"]:focus{
+    border: var(--main-blue-color);
+}
+
+
+
+
+.header button{
+    border: none;
+    border-radius: 18px;
+    background-color: var(--main-blue-color);
+    padding: 9px 17px;
+    font-size: 1rem;
+    font-family: 'Roboto Slab', Arial, Helvetica, sans-serif;
+    color: white;
+}
+.header button:hover{
+    color: var(--main-grey-color);
+    cursor: grab;
+
+}
+
+.buttons{
+    display: flex;
+    gap: 15px;
 }
