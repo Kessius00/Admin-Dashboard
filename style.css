@@ -3,8 +3,14 @@ body{
 }
 :root{
     --main-blue-color: rgb(50, 60, 255);
-    --main-grey-color: rgb(221, 221, 221);
+    --dark-blue-color: rgb(0, 12, 242);
+    --main-grey-color: rgb(241, 241, 241);
     
+}
+
+::selection{
+    color: white;
+    background-color: var(--dark-blue-color);
 }
 
 *{
@@ -17,7 +23,7 @@ body{
     height: 100vh;
     display: grid;
     grid-template-columns: 1.2fr 4fr;
-    grid-template-rows: 1fr 5fr;
+    grid-template-rows: 1fr 4fr;
 
 }
 
@@ -83,6 +89,10 @@ body{
 
 .main-content{
     background-color: var(--main-grey-color);
+
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: 50% 50%;
 }
 
 img[src="./icons/house.jpg"]{
@@ -92,33 +102,37 @@ img[src="./icons/house.jpg"]{
     border-radius: 50%;
 }
 
-.header div .svg{
-    max-width: 20px;
+
+
+.belltime .svg{
+    max-width: 25px;
+}
+
+.searchbar .magnify{
+    max-width: 30px;
 }
 
 .hithere img[src="./icons/house.jpg"]{
     object-fit: cover;
-    height: 70px;
-    width: 70px;
+    height: 65px;
+    width: 65px;
     border-radius: 50%;
 }
 
 .header{
-    width: auto;
-    height: auto;
     display: grid;
     grid-template-columns: 60% 40%;
     margin-left: 20px;
     grid-template-rows: 1fr 1fr;
     align-items: center;
     justify-items: start;
-    padding: 25px;
-    row-gap: 15px;
+    padding-bottom: 10px;
+    row-gap: 6px;
+    background-color: white;
 
 }
 
 .searchbar{
-
     justify-self: stretch;
     display: flex;
     gap: 20px;
@@ -145,19 +159,18 @@ img[src="./icons/house.jpg"]{
 
 
 input[type="search"]{
-    border: none;
+    padding-left: 10px;
     border-radius: 20px;
     height: 2rem;
     background-color: var(--main-grey-color);
+    border: 2px solid var(--main-grey-color);
     width: max(100px, 90%);
     
 }
 
-input[type="search"]:focus{
-    border: var(--main-blue-color);
+input[type="search"]:hover{
+    border-color: var(--main-blue-color);
 }
-
-
 
 
 .header button{
@@ -169,6 +182,7 @@ input[type="search"]:focus{
     font-family: 'Roboto Slab', Arial, Helvetica, sans-serif;
     color: white;
 }
+
 .header button:hover{
     color: var(--main-grey-color);
     cursor: grab;
@@ -178,4 +192,146 @@ input[type="search"]:focus{
 .buttons{
     display: flex;
     gap: 15px;
+}
+
+.project-container{
+    padding: 20px;
+
+    display: grid;
+    grid-template-columns:  repeat(2, minmax(200px, auto));
+    grid-template-rows: repeat(3, minmax(200px, 1fr));
+    justify-items: center;
+    align-items: center;
+    gap: 20px;
+}
+
+
+.project{
+    padding: 30px 20px 15px 20px;
+    
+    height: 200px;
+    max-width: 450px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: none;
+    border-left: 5px solid orange;
+    -webkit-box-shadow: 5px 6px 36px -20px rgba(0,0,0,0.75);
+    -moz-box-shadow: 5px 6px 36px -20px rgba(0,0,0,0.75);
+    box-shadow: 5px 6px 36px -20px rgba(0,0,0,0.75);
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+
+    gap: 10px;
+
+}
+
+.project .project-text{
+    grid-column: 1/3;
+}
+
+.project .svgprojects{
+    grid-column: 2/3;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.project p{
+    color: gray;
+    font-size: 0.8rem;
+}
+
+.project .svg{
+    max-width: 30px;
+}
+.project:hover{
+    border-color: var(--main-blue-color);
+}
+
+.projects-page{
+    grid-row: 1/3;
+    grid-column: 1/2;
+}
+
+
+
+.main-content h3{
+    margin: 20px 20px 20px 40px;
+    
+}
+
+.announcements-container{
+    grid-column: 2/3;
+    grid-row: 1/2;
+    width: 300px;
+}
+
+.trending-container{
+    grid-column: 2/3;
+    grid-row: 2/3;
+
+    width: 300px;
+}
+
+
+.announcements{
+    padding: 20px;
+    background-color: white;
+    border-radius: 20px;
+    display: grid;
+    grid-template-rows: 1fr 2px 1fr 2px 1fr;
+    justify-items: center;
+    grid-template-columns: 1fr;
+}
+
+.announcement{
+    padding: 20px;
+}
+
+.announcement p{
+    font-size: 0.9rem;
+    color: gray;
+}
+
+.line{
+    background-color: gray;
+    height: 2px;
+    width: 200px;
+}
+
+.trending{
+    padding: 20px;
+    background-color: white;
+    border-radius: 20px;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: start;
+    gap: 10px;
+}
+
+.randompfp{
+    height: 30px;
+    width: 30px;
+    background-color: black;
+    border-radius: 2px;
+    margin-right: 10px;
+}
+
+.trending p{
+    color: gray;
+}
+
+.trending div{
+    display: flex;
+
+}
+
+.account{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
